@@ -1,0 +1,81 @@
+{
+  "performance_comparison": {
+    "fuzsemcom": {
+      "accuracy": 0.9485369547164281,
+      "f1_macro": 0.912262402844988,
+      "f1_weighted": 0.9492291527350553,
+      "precision_macro": 0.9155814563587379,
+      "recall_macro": 0.9203907512466515
+    },
+    "l_deepsc": {
+      "accuracy": 0.8802208001563187,
+      "f1_macro": 0.7143663814036961,
+      "f1_weighted": 0.9051779443294825,
+      "precision_macro": 0.705547121840908,
+      "recall_macro": 0.9058512426665632
+    },
+    "differences": {
+      "accuracy_diff_percent": -6.831615456010942,
+      "f1_diff_percent": -19.78960214412919
+    }
+  },
+  "efficiency_comparison": {
+    "communication": {
+      "fse_payload_per_sample": 1,
+      "deepsc_payload_per_sample": 32,
+      "bandwidth_saving_percent": 96.875,
+      "payload_reduction_ratio": 32.0
+    },
+    "computational": {
+      "fse_inference_time_ms": 0.0213326686210459,
+      "deepsc_inference_time_ms": 15.6,
+      "speed_advantage_ratio": 731.2727852815237
+    },
+    "energy": {
+      "fse_energy_per_message_uJ": 4.0,
+      "deepsc_energy_per_message_uJ": 128.0,
+      "energy_saving_percent": 96.875
+    }
+  },
+  "deployment_comparison": {
+    "fuzsemcom": {
+      "hardware_requirement": "ESP32, Arduino (\u2248$2-5)",
+      "model_size": "Rule-based (v\u00e0i KB)",
+      "training_requirement": "Kh\u00f4ng c\u1ea7n",
+      "interpretability": "Cao (fuzzy rules)",
+      "deployment_complexity": "Th\u1ea5p",
+      "maintenance": "C\u1eadp nh\u1eadt rule th\u1ee7 c\u00f4ng"
+    },
+    "l_deepsc": {
+      "hardware_requirement": "Edge compute (\u2248$50-200)",
+      "model_size": "2.4 MB",
+      "training_requirement": "4.5 gi\u1edd fine-tune",
+      "interpretability": "Th\u1ea5p (black-box)",
+      "deployment_complexity": "Cao",
+      "maintenance": "C\u1ea7n retraining \u0111\u1ecbnh k\u1ef3"
+    }
+  },
+  "scalability_analysis": {
+    "annual_bandwidth_saved_gb": 0.25290995836257935,
+    "devices_supported": 1000,
+    "messages_per_year": 8760000,
+    "cost_savings_estimate": {
+      "bandwidth_cost_saved_usd": 26519.53125,
+      "hardware_cost_difference_usd": 45000
+    }
+  },
+  "use_case_recommendations": {
+    "fuzsemcom_preferred": [
+      "C\u1ea3m bi\u1ebfn ch\u1ea1y pin, y\u00eau c\u1ea7u tu\u1ed5i th\u1ecd d\u00e0i",
+      "Trang tr\u1ea1i v\u00f9ng xa, b\u0103ng th\u00f4ng h\u1ea1n ch\u1ebf",
+      "\u01afu ti\u00ean ra quy\u1ebft \u0111\u1ecbnh d\u1ec5 gi\u1ea3i th\u00edch",
+      "Chi ph\u00ed ph\u1ea7n c\u1ee9ng ph\u1ea3i th\u1ea5p"
+    ],
+    "l_deepsc_preferred": [
+      "\u1ee8ng d\u1ee5ng \u0111\u00f2i h\u1ecfi \u0111\u1ed9 ch\u00ednh x\u00e1c t\u1ed1i \u0111a",
+      "C\u00f3 s\u1eb5n edge server c\u1ea5u h\u00ecnh m\u1ea1nh",
+      "Nh\u1eadn d\u1ea1ng m\u1eabu ph\u1ee9c t\u1ea1p, d\u1eef li\u1ec7u phong ph\u00fa",
+      "Ch\u1ea5p nh\u1eadn m\u00f4 h\u00ecnh black-box"
+    ]
+  }
+}
